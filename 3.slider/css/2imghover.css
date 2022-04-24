@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.cta{
+    margin: auto;
+    background-color:#F50057;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border-radius: 4em;
+    color: white;
+}
+.modal{
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: #333;
+    display: flex;
+    --opacity:0;
+    --pointer:none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: 0.5s;
+}
+.modal:target{
+    --opacity:1;
+    --pointer:unset;
+
+}
+.modal:target .modalContainer{
+    animation: show 1s 0.5s backwards;
+}
+@keyframes show {
+    0%{
+        transform: translateY(-150vh);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+.modalContainer{
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: hidden;
+    padding: 2em 1em;
+    border-radius: 1em;
+}
+.modalPicture{
+    width:60%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+.modal:target .modalPicture{
+    animation: scale 0.5s 1s backwards;
+}
+@keyframes scale {
+    0%{
+        transform: scale(0);
+    }
+}
+
+.modalImg{
+    width: 100%;
+    display: block;
+}
+.modal:target .modalTitle{
+    font-size: 2.5rem;
+    font-weight: 500;
+    animation: text 3s backwards;
+}
+@keyframes text {
+    0% {
+        margin-left: 150%;
+        width: 300%
+      }
+    
+    100% {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.modal:target .modalTitle--bold{
+    font-weight: 800;
+    animation: text 3s 1 ;
+}
+.modalP{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+.modalClose{
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 1em 2em;
+    text-decoration: none;
+    color: #333;
+    border-radius: 0.4em;
+}
+@media (max-width:600px){
+.modalTitle{
+    font-size:1.7em;
+}
+}

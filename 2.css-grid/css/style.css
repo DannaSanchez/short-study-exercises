@@ -1,0 +1,215 @@
+.container{
+    display:grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    /*medida que se establece para dar la cantidad de espacio que va a tener un elemento*/
+    grid-template-columns:auto auto auto;
+    background-color: aqua;
+    padding: 10px;
+}
+.container > div {
+    background-color:white;
+    border: 2px solid green;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.aitem{
+    grid-row-start: 1;
+    grid-row-end:5;
+}
+.bitem{
+    grid-column-start: 2;
+    grid-column-end:4;
+}
+/*tarea*/
+.acontainer{
+    display:grid;
+    column-gap: 60px;
+    row-gap: 20px;
+    grid-template-columns: 400px;
+    grid-template-rows:100px 00px 200px 150px;
+    background-color:blue;
+    margin: 30px 0px;
+    padding: 25px;
+}
+.acontainer > div p{
+    font-size: 25px;
+}
+.acontainer > div {
+    background-color:rgb(247, 242, 255);
+    border: 2px solid rgb(193, 84, 236);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.acontain{
+    grid-column: 1 / 3;
+    grid-row:1 / 3; 
+}
+.bcontain{
+    grid-column-start: 3;
+    grid-row: 1 / 4;
+}
+
+.dcontain{
+    grid-column-start: 1;
+    grid-column-end:4;
+}
+/*areas*/
+.clase{
+    display:grid;
+    background-color:#ffefee;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns:auto auto auto;
+    grid-gap: 50px;
+    padding: 10px;
+    margin: 30px 0px;
+    text-align: center;
+    grid-template-areas: "header header header"
+                        "main main section"
+                        "footer footer footer";
+}
+.clase > div p{
+    font-size: 25px;
+}
+.clase > div {
+    border: 2px solid #000000;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;   
+}
+.aclase{
+    grid-area: header;
+    background-color:#7775e7;
+}
+.bclase{
+    background-color: aliceblue;
+    display:grid;
+    grid-area: main;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 25%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "cabeza cabeza"
+    "article sidebar";
+}
+.eclase{
+    background-color:#0081A7;
+    grid-area: cabeza;
+    
+}
+.fclase{
+    grid-area: article;
+    background-color:#01a6d8;
+    
+}
+.gclase{
+    grid-area: sidebar;
+    background-color:#81dffc;
+}
+
+
+.cclase{
+    grid-area: section;
+    background-color: rgb(127, 197, 255);
+}
+
+.dclase{
+    grid-area: footer;
+    background-color: #cd83ff;
+}
+/*1Plantillas*/
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.plantilla{
+    text-align: center;}
+
+/*2Plantillas*/
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.acontainerr{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:"header header header header header header"
+                        "left middle middle middle middle right"
+                        "footer footer footer footer footer footer";
+    grid-column-gap: 10px;
+    text-align: center;
+    grid-row-gap:15px;
+}
+.header{
+    background-color: #f2ddff;
+    grid-area: header;
+}
+.left, .middle , .right{
+    padding: 10px;
+    height: 550px;
+}
+.left{
+    background-color: #6cddce;
+    grid-area: left;
+}
+.middle{
+    background-color: #a4ffdc;
+    grid-area: middle;
+}
+.right{
+    background-color: #6cddce;
+    grid-area: right;
+}
+.footer{
+    background-color: #f2ddff;
+    height: 10vh;
+    grid-area: footer;
+    text-align: center;
+}
+/*3Plantillas*/
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bcontainerr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:"header header header "
+                        "left middle right"
+                        "footer footer footer";
+    grid-column-gap: 10px;
+    text-align: center;
+    grid-row-gap:15px;
+}
+.header{
+    background-color: #f2ddff;
+    grid-area: header;
+}
+.left, .middle , .right{
+    padding: 10px;
+    height: 550px;
+}
+.left{
+    background-color: #6cddce;
+    grid-area: left;
+}
+.middle{
+    background-color: #a4ffdc;
+    grid-area: middle;
+}
+.right{
+    background-color: #6cddce;
+    grid-area: right;
+}
+.footer{
+    background-color: #f2ddff;
+    height: 10vh;
+    grid-area: footer;
+    text-align: center;
+}
+

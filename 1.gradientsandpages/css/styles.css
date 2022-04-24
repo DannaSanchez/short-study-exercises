@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+ 
+:root{
+    --dark-purple:rgb(68, 17, 81);
+    --morado: rgb(136, 54, 119);
+    --fuchsia:rgb(202, 97, 195);
+    --pink:rgb(238, 133, 181);
+    --congopink:rgb(255, 149, 140);
+    --shadow:rgb(220, 220, 220);
+}
+ 
+ 
+body{
+    font-family: 'Roboto', sans-serif;;
+    color: var(--dark-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+}
+
+.titulo h1{
+    color: #fff;
+    text-shadow: 0px 0px 10px black;
+    font-size: 40px;
+    font-family: 'Fredoka One', cursive;
+}
+.titulo img{
+    width: 150px;
+}
+.contenido{
+    margin: auto;
+    width:800px;
+}
+.contenido h2{
+    font-family: 'Fredoka One', cursive;
+}
+.contenido ul{
+    list-style-image:url(../img/lunalista.png)
+}
+.personaje{
+    width:800px;
+    background:linear-gradient(#f9a9fb,#f9d3fa);
+    margin: 30px 0px;
+    padding: 30px;
+    box-shadow: 3px 3px 7px #999;
+    font-family:'Mulish', sans-serif;;
+    
+}
+.personaje img{
+    width:150px;
+    border: 7px solid #ffff;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+.personaje h2{
+    color:  #ffff;
+    text-shadow: 2px 2px 4px #000;
+}
+.personaje p{
+    text-align: justify;
+}
+.boton{
+    width:120px;
+    background-color: var(--fuchsia);
+    color:#fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.boton a{
+    width:120px;
+    text-decoration: none;
+    color:#fff;
+}
+.boton:hover{
+    width:120px;
+    background-color:#0000ff ;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+    cursor: pointer;
+}
+.personaje img:hover{
+    transform:rotate(-60deg) scale(1.5);
+    transition-duration: 3s ease-out 1s
+}
+
+.cajaprincipal{
+    width: 285px;
+    height: 350px;
+    background-color: #000;
+    color: #fff;
+    margin: 30px auto 100px;
+    text-align: center;
+    box-shadow: 0px 0px 15px #999; 
+    overflow: hidden;
+}
+
+.encabezado{
+background-color: #fff;
+color: #000;
+font-family: 'Fredoka One', cursive;
+font-size: 20px;
+font-style: normal;
+font-weight: bold;
+padding: 4px 0px;
+margin-bottom: 10px;
+}
+
+.cajaperfil{
+    width: 280px;
+    display: flex;    
+}
+.cajaperfil:hover{
+    transform: translateX(-250px);
+    width:280px;
+    transition-duration: 3s;
+    transition-timing-function:initial;
+    transition-delay: 1s;
+}
+
+.foto img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid white;
+
+}
+.header2 img{
+    width: 200px;   
+}
+.foto{padding:0px 60px;}
+.header2{padding: 60px 8px;}
+.perso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}

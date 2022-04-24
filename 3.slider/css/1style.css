@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,300;0,400;0,800;0,900;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+#logos{
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+}
+.logos{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+i{
+    font-size: 70px;
+}
+.a-logo{
+    animation: brand 1.5s ease-in 2s 1;
+}
+.b-logo{
+    animation: brand 1.5s ease-in 4s 1;
+}
+.c-logo{
+    animation: brand 1.5s ease-in 6s 1;
+}
+.d-logo{
+    animation: brand 1.5s ease-in 8s 1;
+}
+@keyframes brand{
+    20%{
+        transform: translateY(-15px);
+    }
+}
+/*Slider*/
+#slider{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+#slider input[type=radio]{
+    display: none;
+}
+#slider label{
+    cursor: pointer;
+}
+#slide1:checked ~ #slides .inner{
+margin-left:0;
+}
+#slide2:checked ~ #slides .inner{
+margin-left:-100%;
+}
+#slide3:checked ~ #slides .inner{
+margin-left:-200%;
+}
+#slide4:checked ~ #slides .inner{
+margin-left:-300%;
+}
+#slides .inner{
+    width: 400%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition:margin-left 1s ease-out;
+}
+#slides .slide{
+    width: 50%;
+    height: 100%;
+}
+#slides .slide_1{
+    background-image:url(/img/nico-bhlr-QT-l619id6w-unsplash.jpg);
+    background-size: cover;
+    background-position: -10px;
+}
+p {
+    font-family: 'Anybody', cursive;
+    background-color: rgba(255, 255, 255, 0.795);
+    font-weight: 400;
+    padding: 15px;
+    font-size: 22px;
+}
+h2 {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Anybody', cursive;
+    font-weight: bolder;
+    font-size: 55px;
+    padding: 15px;
+    background-color:rgba(0, 115, 255, 0.789);
+}
+#slides .slide_2{
+    background-image: url(/img/2.jpg);
+    background-size: cover;
+}
+#slides .slide_3{
+    background-image: url(/img/3.jpg);
+    background-size: cover;
+}
+#slides .slide_4{
+    background-image: url(/img/4.jpg);
+    background-size: cover;
+}
+.controllers{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+.bullets{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bullets label{
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    background-color: rgb(43, 125, 226);
+    border-radius: 100%;
+}
+#slide1:checked ~ .bullets label:nth-child(1),
+#slide2:checked ~ .bullets label:nth-child(2),
+#slide3:checked ~ .bullets label:nth-child(3),
+#slide4:checked ~ .bullets label:nth-child(4){
+    background:black
+}

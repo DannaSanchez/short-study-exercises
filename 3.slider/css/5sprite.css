@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik Glitch', cursive;
+}
+.sprite{
+    height: 160px;
+    width: 128px;
+    background-image:url(../img/run1.png);
+    margin: 0 auto;
+    background-position:-500px 0 ;
+    position: absolute;
+    left: 40%;
+    bottom: 20px;
+    animation: correr 3s steps(8) infinite;
+}
+@keyframes correr {
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: -1024px;
+    }
+}
+.fondo{
+    height:310px ;
+    width: 800px;
+    background-image: url(../img/park.jpg);
+    position: relative;
+    animation: fondoimg 5s linear infinite;
+}
+@keyframes fondoimg {
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: -800px;
+    }
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenedor h1{
+    color: white;
+    font-size: 70px;
+}
+body{
+    place-content: center;
+    background-image: linear-gradient(#ff4ecd, #ff45d9,  #f23cf2, #d33ffe, #ad46ff, #7b4fff , #0058ff);
+    background-size:200% 200%;
+    animation: mov 2s infinite alternate;
+
+}
+@keyframes mov{
+    from{
+        background-position:10% 0 ;
+    }
+    to{
+        background-position:80% ;
+    }
+}
